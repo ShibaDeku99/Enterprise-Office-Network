@@ -203,7 +203,7 @@ Enterprise-Office-Network
 │   ├── show-ip-route.png
 │   └── network-connectivity-test.png
 │
-└── report.pdf
+└── 
 ```
 
 ---
