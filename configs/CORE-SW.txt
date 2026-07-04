@@ -1,0 +1,18 @@
+enable
+configure terminal
+hostname CORE-SW
+
+vlan 10
+ name HR
+vlan 20
+ name IT
+vlan 30
+ name SALES
+
+interface range fa0/1-4
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+ description TRUNK-LINK
+
+end
+write memory

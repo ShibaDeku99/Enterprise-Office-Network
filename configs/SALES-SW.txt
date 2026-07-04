@@ -1,0 +1,24 @@
+enable
+configure terminal
+hostname SALES-SW
+
+vlan 10
+ name HR
+vlan 20
+ name IT
+vlan 30
+ name SALES
+
+interface fa0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+ description TO-CORE-SW
+
+interface range fa0/2-4
+ switchport mode access
+ switchport access vlan 30
+ description SALES-PCs
+ spanning-tree portfast
+
+end
+write memory
